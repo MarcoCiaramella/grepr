@@ -38,7 +38,7 @@ function search(string,file,callback){
 	stream.on('data', function(chunk){
 		for (var i = 0; i < chunk.length; i++) {
 
-			var char = String.fromCharCode(chunk[i]);
+			var char = chunk[i];
 
 			if (char !== '\n') {
 				line += char;
