@@ -1,5 +1,5 @@
 
-var grepr = require('./grepr');
+var grepr = require('./index');
 
 grepr("tempo","./test", function(file,indicies,lines){
 	console.log("FOUND in "+file);
