@@ -24,9 +24,6 @@ grepr("npm","./", function(file,indicies,lines){
 });
 ```
 
-## Developing
-
-
 
 ### Tools
 
