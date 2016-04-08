@@ -30,7 +30,7 @@ function search(string,file,callback){
 	var stringIndex = 0;
 	var found = false;
 	var foundNewLine = false;
-	var indicies = [];
+	var indices = [];
 	var lineIndex = 0;
 	var lines = [];
 	var line = '';
@@ -56,7 +56,7 @@ function search(string,file,callback){
 				if (char === '\n') {
 					if (found) {
 						lines.push(line);
-						indicies.push(lineIndex);
+						indices.push(lineIndex);
 						foundNewLine = true;
 						found = false;
 						numCharFound = 0;
@@ -75,7 +75,7 @@ function search(string,file,callback){
 	});
 	stream.on('end', function(){
 		if (foundNewLine) {
-			callback(file,indicies,lines);
+			callback(file,indices,lines);
 		}
 	});
 	stream.on('close', function(){
