@@ -12,7 +12,7 @@ Function prototype is `function(string,dir,callback)` where:
 * `dir`: is directory where the search starts;
 * `callback`: is a function of type `function(file,indices,lines)` where file is the complete file path where the text has been found, indices is an array of line index containing text, and lines is the array of lines containing text.
 
-Callback is called only on that files containing at least one occurrence of the input string. 
+Callback is called only on those files containing at least one occurrence of the input string. 
 
 For example this call search in the current dir the word npm:
 
