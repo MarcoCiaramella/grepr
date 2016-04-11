@@ -3,18 +3,21 @@
 # grepr
 
 
+## Installation
+npm install grepr
+
 
 ## Usage
 
 Function prototype is `function(string,dir,callback)` where:
 
-* `string`: is the text to search;
+* `string`: is the string to search;
 * `dir`: is directory where the search starts;
-* `callback`: is a function of type `function(file,indices,lines)` where file is the complete file path where the text has been found, indices is an array of line index containing text, and lines is the array of lines containing text.
+* `callback`: is a function of type `function(file,indices,lines)` where file is the complete file path where the input string has been found, indices is an array of line index and lines is the array of lines containing the string.
 
 Callback is called only on those files containing at least one occurrence of the input string. 
 
-For example this call search in the current dir the word npm:
+For example this call search in the current directory the word npm:
 
 ```javascript
 var grepr = require('grepr');
