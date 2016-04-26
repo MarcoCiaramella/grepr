@@ -1,6 +1,8 @@
 
 var fs = require('fs');
 
+var fileList = null;
+var indexFile = 0;
 
 function listDir(dir){
 
@@ -74,20 +76,22 @@ function search(string,file,callback){
 		}
 	});
 	stream.on('end', function(){
+	});
+	stream.on('close', function(){
 		if (foundNewLine) {
 			callback(file,indices,lines);
 		}
-	});
-	stream.on('close', function(){
+		if (indexFile === fileList.length) {
+			return;
+		}
+		search(string,fileList[indexFile++],callback);
 	});
 }
 
 function grepr(string,dir,callback){
 
-	var fileList = listDir(dir);
-	fileList.forEach(function(file,index){
-		search(string,file,callback);
-	});
+	fileList = listDir(dir);
+	search(string,fileList[indexFile++],callback);
 }
 
 module.exports = grepr;
