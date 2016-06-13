@@ -9,7 +9,7 @@ npm install grepr
 
 ## Usage
 
-Function prototype is `function(string,dir,callback)` where:
+Function signature is `function(string,dir,callback)` where:
 
 * `string`: is the string to search;
 * `dir`: is directory where the search starts;
@@ -24,7 +24,7 @@ var grepr = require('grepr');
 
 grepr("npm","./", function(file,indices,lines){
 	console.log("FOUND in "+file);
-	console.log("indices\n"+indices);
+	console.log("INDICES\n"+indices);
 	console.log("LINES\n"+lines);
 });
 ```
