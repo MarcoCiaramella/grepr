@@ -1,14 +1,12 @@
 
 
 # grepr
-
+Node.js module that implements a recursive grep function.
 
 ## Installation
 npm install grepr
 
-
 ## Usage
-
 Function signature is `function(string,dir,callback)` where:
 
 * `string`: is the string to search
