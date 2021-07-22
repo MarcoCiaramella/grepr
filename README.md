@@ -11,9 +11,9 @@ npm install grepr
 
 Function signature is `function(string,dir,callback)` where:
 
-* `string`: is the string to search;
-* `dir`: is directory where the search starts;
-* `callback`: is a function of type `function(file,indices,lines)` where file is the complete file path where the input string has been found, indices is an array of line index and lines is the array of lines containing the string.
+* `string`: is the string to search
+* `dir`: is directory where the search starts
+* `callback`: is a function of type `function(file,indices,lines)` where file is the complete file path where the input string has been found, indices is an array of line index and lines is the array of lines containing the string
 
 Callback is called only on those files containing at least one occurrence of the input string. 
 
@@ -28,11 +28,3 @@ grepr("npm","./", function(file,indices,lines){
 	console.log("LINES\n"+lines);
 });
 ```
-
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
